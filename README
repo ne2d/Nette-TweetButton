@@ -26,6 +26,9 @@ Create factory
     public function createComponentTweetButton($name)
     {
       $tb = new Twitter_TweetButton($this, $name);
+      $tb->setCount('horizontal');
+      $tb->setText('Můj první tweet');
+      $tb->setUrl('http://www.nette.org');
       return $tb;
     }
 
