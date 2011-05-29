@@ -3,7 +3,7 @@
  * TweetButton control
  *
  * @copyright Tomáš Nedvěd (ne2d) http://programator.ne2d.cz
- * @licence WTFPL - Do What The Fuck You Want To Public License 
+ * @license MIT
  * @version 1.0
  */
  
