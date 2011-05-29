@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * TweetButton control
  *
@@ -38,16 +38,19 @@ class Twitter_TweetButton extends Control
     return $this;
   }
 
+  //This is the text that people will include in their Tweet when they share from your website:
   public function setText($text)
   {
     $this->text = $text;
   }
 
+  //Suggest a default Tweet for users.
   public function setUrl($url)
   {
     $this->url = $url;
   }
 
+  //This is the language that the button will render in on your website. People will see the Tweet dialog in their selected language for Twitter.com.
   public function setLanguage($lang)
   {
     switch($lang)
@@ -85,6 +88,7 @@ class Twitter_TweetButton extends Control
     return $this;
   }
 
+  //Recommend up to two Twitter accounts for users to follow after they share content from your website. These accounts could include your own, or that of a contributor or a partner.
   public function setVia($via)
   {
     $this->via = $via;
