@@ -1,0 +1,36 @@
+Nette-TweetButton (c) 2011 Tomáš Nedvìd (http://programator.ne2d.cz)
+
+
+
+Introduction
+------------
+
+Nette Control for adding Tweet Button to your page
+
+Twitter resources: http://twitter.com/about/resources/tweetbutton
+Nette Framework homepage: http://www.nette.org/
+
+
+Requirements
+------------
+
+- PHP (version 5 or better)
+- Nette Framework
+
+
+Usage
+-----
+
+Create factory
+
+    public function createComponentTweetButton($name)
+    {
+      $tb = new Twitter_TweetButton($this, $name);
+      return $tb;
+    }
+
+Create widget
+
+    {widget tweetButton}
+
+    
