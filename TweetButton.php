@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * TweetButton control
  *
@@ -15,6 +15,9 @@ class Twitter_TweetButton extends Control
   private $text = "";
   private $url = "";
   private $language = "en";
+  private $via = "";
+  private $related1 = "";
+  private $related2 = "";
 
   public function setCount($count)
   {
@@ -82,6 +85,21 @@ class Twitter_TweetButton extends Control
     return $this;
   }
 
+  public function setVia($via)
+  {
+    $this->via = $via;
+  }
+
+  public function setRelated1($related1)
+  {
+    $this->related1 = $related1;
+  }
+
+  public function setRelated2($related2)
+  {
+    $this->related2 = $related2;
+  }
+
   private function getCount()
   {
     return $this->count;
@@ -100,6 +118,21 @@ class Twitter_TweetButton extends Control
   private function getLanguage()
   {
     return $this->language;
+  }
+
+  private function getVia()
+  {
+    return $this->via;
+  }
+
+  private function getRelated1()
+  {
+    return $this->related1;
+  }
+
+  private function getRelated2()
+  {
+    return $this->related2;
   }
 
   /*
@@ -126,6 +159,10 @@ class Twitter_TweetButton extends Control
       $tweetdata['data-url'] = $this->getUrl();
     if($this->getLanguage() != "")
       $tweetdata['data-lang'] = $this->getLanguage();
+    if($this->getVia() != "")
+      $tweetdata['data-via'] = $this->getVia();
+    if($this->getRelated1() != "" && $this->getRelated2() != "")
+      $tweetdata['data-related'] = $this->getRelated1().':'.$this->getRelated2();
 
     $el = Html::el('a', $tweetdata)
       ->href('http://twitter.com/share')
